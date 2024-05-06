@@ -22,76 +22,108 @@ body {
 h3{
     font-size: 60pt;
     padding: 1cm;
-}
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-.hover08 figure img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover08 figure:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-}
-.column {
-	margin: 15px 15px 0;
-	padding: 0;
-}
-.column:last-child {
-	padding-bottom: 60px;
-}
-.column::after {
-	content: '';
-	clear: both;
-	display: block;
-}
-.column div {
-	position: relative;
-	float: left;
-	width: 300px;
-	height: 200px;
-	margin: 0 0 0 25px;
-	padding: 0;
-}
-.column div:first-child {
-	margin-left: 0;
-}
-.column div span {
-	position: absolute;
-	bottom: -20px;
-	left: 0;
-	z-index: -1;
-	display: block;
-	width: 300px;
+} 	
+
+
+*, *:before, *:after{
 	margin: 0;
 	padding: 0;
-	color: #444;
-	font-size: 18px;
-	text-decoration: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+  }
+  
+  body{
+	background: #f9f9f9;
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+  }
+  
+
+  @media screen and (max-width: 640px){
+	.container{
+	  display: block;
+	  width: 100%;
+	}
+  }
+  
+  @media screen and (min-width: 900px){
+	.container{
+	  width: 33.33333%;
+	}
+  }
+  
+  .container .title{
+	color: #1a1a1a;
 	text-align: center;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-	opacity: 0;
-}
-figure {
+
+  }
+  
+  .content {
+	position: relative;
 	width: 100%;
-	height: auto;
-	margin: 0;
-	padding: 0;
-	background: #fff;
 	overflow: hidden;
-}
-figure:hover+span {
-	bottom: -36px;
+  }
+  
+  .content .content-overlay {
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .content:hover .content-overlay{
 	opacity: 1;
-}
-h2 span {
-	margin-left: 1em;
-	color: #aaa;
-	font-size: 85%;
-}
+  }
+  
+  .content-image{
+	width: 100%;
+  }
+  
+  .content-details {
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .content:hover .content-details{
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+  }
+  
+  .content-details h3{
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+  }
+  
+  .content-details p{
+	color: #fff;
+	font-size: 0.8em;
+  }
+  
+  .fadeIn-bottom{
+	top: 80%;
+  }
