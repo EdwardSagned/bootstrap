@@ -23,7 +23,9 @@ h3{
     font-size: 60pt;
     padding: 1cm;
 } 	
-
+img{
+	padding-bottom: 10%;
+}
 
 *, *:before, *:after{
 	margin: 0;
