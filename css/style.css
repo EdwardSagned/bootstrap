@@ -24,9 +24,13 @@ h3{
     padding: 1cm;
 } 	
 img{
-	padding-bottom: 10%;
+	width: 100%;
+	height: auto;
 }
-
+p {
+	text-align: left;
+	line-height: 1;
+  }
 *, *:before, *:after{
 	margin: 0;
 	padding: 0;
@@ -39,6 +43,18 @@ img{
 	background: #f9f9f9;
 	font-size: 16px;
 	font-family: 'Raleway', sans-serif;
+  }
+  
+  .top-left {
+	position: absolute;
+	top: 10%;
+	left: 3%;
+  }
+  h1{
+	font-family:'Trebuchet MS', sans-serif;
+	font-weight: bold;
+	font-size: xx-large;
+	color: #f9f9f9;
   }
   
 
